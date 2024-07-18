@@ -12,7 +12,7 @@ const router = require('./Routers/generateDayRouter');
 
 app.use(express.json());
 app.use(cors({
-  origin : ["https://full-primal-ai.web.app/"],
+  origin : ["https://full-primal-ai.web.app"],
   methods : ["POST"],
   credentials : true
 }));
