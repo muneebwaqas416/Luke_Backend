@@ -13,10 +13,10 @@ const router = require('./Routers/generateDayRouter');
 app.use(express.json());
 app.use(cors(
     {
-        origin : "http://localhost:5173",
-        methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-        credentials : true 
-    }
+        origin:'http://localhost:5173', 
+        credentials:true,            //access-control-allow-credentials:true
+        optionSuccessStatus:200
+    } 
 )); // If you need to handle CORS
 
 const openai = new OpenAI({
