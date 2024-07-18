@@ -131,7 +131,7 @@ const generateDayController = async (req, res) => {
             }
         
     } catch (error) {
-      return res.status(500).send("Technical Error, please try again");
+      return res.status(500).send(`Technical Error, please try again+${error}`);
     }
 }
 
