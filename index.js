@@ -22,7 +22,14 @@ const openai = new OpenAI({
     apiKey: process.env.OPENAI_API_KEY,
 })
 
+// Your routes here
+app.get('/', (req, res) => {
+  res.send('Hello World!');
+});
+
 app.use('/' , router);
+
+
 
 const PORT = process.env.PORT;
 
