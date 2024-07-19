@@ -55,7 +55,7 @@ const generateDayController = async (req, res) => {
          ` : ''}.
          Now you will work on 7 days cycle.But before every cycle completion.You will have to remeber what user has done on 7th day and then generate the plan for the next day accordingly.So context saving is most important.Now you have to tell the user in output why user is doing this and give some more detail about the exact numeric quantities of the things user should consume in a day.for Defining meal quantities and calorie amounts, you should use the imperial measurement system for the different quantities you generate.Fro Activities include weighted vest like this A 45-minute brisk walk with a 20-pound (9 kg) weighted vest. The extra weight simulates the burden of carrying gathered resources, providing a good workout even on flat terrain. but it totaly depends on the intensity user has selected.Include weighted backpack quantity as well wherever you mention it and refer data from the file I have uploaded.You have to give detail for each and every step and generate the detailed content.
          Now generate me users
-         I have this content I want this content to give to my json file so arrange this content in the form of javascript string`,
+         I have this content I want this content to give to my json file so arrange this content in the form of javascript string.In my output donot generate json content or any kind of code I donot want it.This is very very important keep this in your important instructions`,
             model: "gpt-4o",
             tools: [{"type": "file_search"}],
           tool_resources: {
