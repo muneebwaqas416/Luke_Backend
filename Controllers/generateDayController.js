@@ -8,6 +8,7 @@ const openai = new OpenAI({
 
 // controllers/generateDayController.js
 const generateDayController = async (req, res) => {
+    console.log(process.env.OPENAI_API_KEY);
     const {userinfo} = req.body;
     console.log(userinfo);
     try {
