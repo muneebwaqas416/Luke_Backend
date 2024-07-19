@@ -13,8 +13,9 @@ const router = require('./Routers/generateDayRouter');
 
 app.use(cors({
   origin : ["https://full-primal-ai.web.app"],
-  methods : ["POST"],
-  credentials : true
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true
 }));
 app.use(express.json());
 console.log(process.env.OPENAI_API_KEY);
