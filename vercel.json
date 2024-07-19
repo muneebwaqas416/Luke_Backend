@@ -1,7 +1,14 @@
 {
   "version": 2,
   "builds": [
-    { "src": "*.js", "use": "@vercel/node" }
+    { 
+      "src": "*.js", 
+      "use": "@vercel/node",
+      "functions": {
+        "controllers/*.js": { "maxDuration": 60 },
+        "middleware/**/*.js": { "maxDuration": 60 }
+      }
+    }
   ],
   "routes": [
     {
