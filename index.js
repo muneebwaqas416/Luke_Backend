@@ -10,13 +10,14 @@ const router = require('./Routers/generateDayRouter');
 
 // Middleware to parse JSON bodies
 
-
-app.use(cors({
+const corsOptions = {
   origin : ["https://full-primal-ai.web.app/"],
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true
-}));
+};
+app.use(cors(corsOptions));
+app.options('*', cors(corsOptions)); // Handle preflight requests
 app.use(express.json());
 console.log(process.env.OPENAI_API_KEY);
 const openai = new OpenAI({
