@@ -11,11 +11,13 @@ const router = require('./Routers/generateDayRouter');
 // Middleware to parse JSON bodies
 
 const corsOptions = {
-  origin : ["https://full-primal-ai.web.app/"],
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  allowedHeaders: ['Content-Type', 'Authorization'],
-  credentials: true
+  origin: 'https://full-primal-ai.web.app', // Replace with your actual frontend URL
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
+  allowedHeaders: 'X-Requested-With, Content-Type, Authorization',
+  credentials: true,
+  optionsSuccessStatus: 200 // Some legacy browsers (IE11, various SmartTVs) choke on 204
 };
+
 app.use(cors(corsOptions));
 app.options('*', cors(corsOptions)); // Handle preflight requests
 app.use(express.json());
