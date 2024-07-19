@@ -7,8 +7,8 @@
     }
   ],
   "functions": {
-    "Backend/**/*.js": {
-      "maxDuration": 150
+    "path/to/dir/**/*": {
+      "maxDuration": 150 
     }
   },
   "routes": [
