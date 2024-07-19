@@ -4,11 +4,14 @@
     { 
       "src": "*.js", 
       "use": "@vercel/node",
-      "functions": {
-        "Backend/Controllers/*.js": { 
-        "maxDuration": 150 
-        }
+      "config" : {
+          "functions": {
+          "Backend/Controllers/*.js": { 
+          "maxDuration": 150 
+          }
+        }  
       }
+      
     }
   ],
   "routes": [
