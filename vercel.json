@@ -15,7 +15,7 @@
       "headers": [
         {
           "key": "Access-Control-Allow-Origin",
-          "value": "https://full-primal-ai.web.app"  // Replace with your actual frontend URL
+          "value": "https://full-primal-ai.web.app"
         },
         {
           "key": "Access-Control-Allow-Methods",
