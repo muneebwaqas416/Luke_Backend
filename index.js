@@ -11,7 +11,7 @@ const router = require('./Routers/generateDayRouter');
 // Middleware to parse JSON bodies
 
 const corsOptions = {
-  origin: 'https://fullprimal.ai', // Replace with your actual frontend URL
+  origin: ['https://fullprimal.ai','https://www.fullprimal.ai/'], // Replace with your actual frontend URL
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
   allowedHeaders: 'X-Requested-With, Content-Type, Authorization',
   credentials: true,
